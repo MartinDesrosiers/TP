@@ -73,12 +73,12 @@ public class HeroController : MonoBehaviour {
 
 	public void isDead() {
 		Debug.Log ("He is dead");
-		this.transform.position = new Vector3(0,-2.99f,0);
+		this.transform.position = new Vector3(3f,2f,0);
 		horizontalForce = 0f;
 		//HeroController.Respawn();
 	}
 
 	public void levelCompleted() {
-		Application.LoadLevel("menu");
+		Application.LoadLevel("Prototype");
 	}
 }
