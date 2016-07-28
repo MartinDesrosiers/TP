@@ -18,7 +18,7 @@ public class CameraMovement : MonoBehaviour {
 		//Horizontal half of the screen compared to world units
 		horizonExtent = Camera.main.orthographicSize * Screen.width / Screen.height;
 		//Vertical half of the screen compared to world units
-		verticalExtent = Camera.main.orthographicSize;
+		verticalExtent = Camera.main.orthographicSize+1;
 		Debug.Log ("Screen Boundaries x :"+horizonExtent+" /y :"+verticalExtent);
 
 		//Initial camera position(inside the boudaries)

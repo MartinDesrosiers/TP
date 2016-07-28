@@ -1,0 +1,33 @@
+Serializer
+
+exemple :
+BinaryFormatter bf = new BinaryFormatter ();
+		FileStream file = File.Create (Application.persistentDataPath + "/saveddata.dat");
+		Environment.SetEnvironmentVariable("MONO_REFLECTION_SERIALIZER", "yes");
+		bf.Serialize (file, saveddata);
+		file.Close ();
+ça c'est pour save
+load c'est :
+
+Environment.SetEnvironmentVariable("MONO_REFLECTION_SERIALIZER", "yes");
+		//
+		Debug.Log ("LOAD METHOD START");
+		FileInfo info = new FileInfo (Application.persistentDataPath + "/saveddata.dat");
+		
+		if (info.Exists == false || info == null || info.Length <= 0) {
+			Debug.Log ("NO SAVED DATA exists on device");
+			saveddata = new SavedData();
+			
+		} else {
+			Debug.Log ("SAVED DATA already exists on device");
+			BinaryFormatter bf = new BinaryFormatter ();
+			FileStream file = File.Open (Application.persistentDataPath + "/saveddata.dat", FileMode.Open);
+			
+			
+			
+			saveddata = (SavedData)bf.Deserialize(file);
+			
+			file.Close();
+			
+			
+		}

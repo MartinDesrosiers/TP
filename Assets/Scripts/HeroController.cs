@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class HeroController : MonoBehaviour {
 
@@ -79,6 +80,6 @@ public class HeroController : MonoBehaviour {
 	}
 
 	public void levelCompleted() {
-		Application.LoadLevel("Prototype");
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
 }
