@@ -11,12 +11,16 @@ public class HeroController : MonoBehaviour {
 	public float jumpForce = 1000f;
 	public Transform groundCheck;
 	private float horizontalForce =0;
+	private float verticalForce = 0;
 
 
 	private bool grounded = false;
 	private Animator anim;
 	private Rigidbody2D rb2d;
 
+
+	//Mobile controls
+	private Vector2 touchOrigin = -Vector2.one;
 
 	// Use this for initialization
 	void Awake () 
@@ -30,13 +34,46 @@ public class HeroController : MonoBehaviour {
 	void Update () 
 	{
 		grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
+
+		#if UNITY_STANDALONE || UNITY_WEBPLAYER || UNITY_EDITOR
+
 		if (Input.GetButtonDown("Jump") && grounded) {
 			jump = true;
 		}
+
+		#else
+
+		if (Input.touchCount > 0) {
+			Touch myTouch = Input.touches[0];
+			if(myTouch.phase == TouchPhase.Began) {
+				touchOrigin = myTouch.position;
+			}
+			else if (myTouch.phase == TouchPhase.Ended && touchOrigin.x >=0 ) {
+				Vector2 touchEnd = myTouch.position;
+				float x = touchEnd.x - touchOrigin.x;
+				float y = touchEnd.y - touchOrigin.y;
+				touchOrigin.x =-1;
+				if(Mathf.Abs(x) > Mathf.Abs(y)) {
+					horizontalForce = x > 0  ? 1 : -1;
+					Debug.Log("Moving to " +horizontalForce);
+				}
+				else {
+					verticalForce = y >0 ? 1 : -1;
+					if (verticalForce == 1 && grounded) {
+						jump = true;
+					}
+				}
+				verticalForce = 0;
+			}
+		}
+
+		#endif
 	}
 
 	void FixedUpdate()
 	{
+		#if UNITY_STANDALONE || UNITY_WEBPLAYER || UNITY_EDITOR || UNITY_HTML5
+
 		horizontalForce = Input.GetAxis("Horizontal");
 		anim.SetFloat("Speed", Mathf.Abs(horizontalForce));
 
@@ -45,6 +82,15 @@ public class HeroController : MonoBehaviour {
 
 		if (Mathf.Abs (rb2d.velocity.x) > maxSpeed)
 			rb2d.velocity = new Vector2(Mathf.Sign (rb2d.velocity.x) * maxSpeed, rb2d.velocity.y);
+
+		#else
+
+		if (horizontalForce != 0) {
+		rb2d.AddForce(Vector2.right * horizontalForce * moveForce);
+		rb2d.velocity = new Vector2(Mathf.Sign (rb2d.velocity.x) * maxSpeed, rb2d.velocity.y);
+		}
+
+		#endif
 
 		if (horizontalForce > 0 && !facingRight)
 			Flip ();
@@ -56,6 +102,7 @@ public class HeroController : MonoBehaviour {
 			rb2d.AddForce(new Vector2(0f, jumpForce));
 			jump = false;
 		}
+
 	}
 
 
@@ -74,7 +121,7 @@ public class HeroController : MonoBehaviour {
 
 	public void isDead() {
 		Debug.Log ("He is dead");
-		this.transform.position = new Vector3(3f,2f,0);
+		this.transform.position = new Vector3(3f,4f,0);
 		horizontalForce = 0f;
 		//HeroController.Respawn();
 	}

@@ -8,6 +8,13 @@ public class MainScript : MonoBehaviour {
 	//public GameObject editorUI;
 	//public GameObject heroUI;
 
+	public string[] unlockedLevelObjects;
+	public string[] unlockedEnemyObjects;
+	public string[] unlockedCollectibleObjects;
+	public string[] unlockedTrapObjects;
+	public string[] unlockedGroundObjects;
+	public string[] unlockedEditObjects;
+
 	private Vector3 initialHeroPosition;
 
 	// Use this for initialization
