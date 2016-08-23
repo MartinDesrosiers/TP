@@ -15,7 +15,7 @@ public class HeroController : MonoBehaviour {
 
 
 	private bool grounded = false;
-	private Animator anim;
+	public Animator anim;
 	private Rigidbody2D rb2d;
 
 
@@ -26,7 +26,6 @@ public class HeroController : MonoBehaviour {
 	void Awake () 
 	{
 		facingRight = true;
-		anim = GetComponent<Animator>();
 		rb2d = GetComponent<Rigidbody2D>();
 	}
 
@@ -34,6 +33,10 @@ public class HeroController : MonoBehaviour {
 	void Update () 
 	{
 		grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
+
+		if (grounded) {
+			//rb2d.transform.position = new Vector2(rb2d.position.x,rb2d.position.y+0.1f);
+		}
 
 		#if UNITY_STANDALONE || UNITY_WEBPLAYER || UNITY_EDITOR
 
@@ -92,6 +95,8 @@ public class HeroController : MonoBehaviour {
 
 		#endif
 
+		anim.SetFloat("Speed", Mathf.Abs(horizontalForce));
+
 		if (horizontalForce > 0 && !facingRight)
 			Flip ();
 		else if (horizontalForce < 0 && facingRight)
@@ -115,12 +120,8 @@ public class HeroController : MonoBehaviour {
 		transform.localScale = theScale;
 	}
 
-	public void Respawn(){
-		Debug.Log ("The character is respawning.");
-	}
-
 	public void isDead() {
-		Debug.Log ("He is dead");
+		//Debug.Log ("He is dead");
 		this.transform.position = new Vector3(3f,4f,0);
 		horizontalForce = 0f;
 		//HeroController.Respawn();

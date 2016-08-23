@@ -9,6 +9,7 @@ public class menuColorSprite : MonoBehaviour {
 
 	public Sprite[] menuColors;
 	public GameObject[] ObjectToggles;
+	public GameObject undoButton;
 
 	public Sprite[] levelTogglesSprites;
 	public Sprite[] enemyTogglesSprites;
@@ -83,6 +84,14 @@ public class menuColorSprite : MonoBehaviour {
 				//Debug.Log("This toogle is locked : "+i);
 			}
 			ObjectToggles[i].GetComponent<Toggle>().isOn = false;
+		}
+	}
+
+	public void lockUndoButton(bool isLocked) {
+		if (isLocked) {
+			undoButton.GetComponent<Toggle> ().interactable = false;
+		} else {
+			undoButton.GetComponent<Toggle> ().interactable = true;
 		}
 	}
 }

@@ -14,10 +14,16 @@ public class SelectObjectEditor : MonoBehaviour {
 			selectedObject = "None";
 		}
 
-		//Debug.Log ("Edit Mode : One button was clicked.");
+		Debug.Log ("Edit Mode : "+selectedObject+" was clicked.");
 		LevelEditor levelEditor = editorImporter.GetComponent<LevelEditor> ();
+
 		levelEditor.objectSelected = selectedObject;
 
 		previousSelection = selectedObject;
+	}
+
+	public void undoClick() {
+		LevelEditor levelEditor = editorImporter.GetComponent<LevelEditor> ();
+		levelEditor.UndoLevelChanges ();
 	}
 }
