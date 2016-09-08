@@ -12,11 +12,11 @@ public class SelectHeroEditor : MonoBehaviour {
 		switch (this.gameObject.name) {
 		case "HairButton":
 			Debug.Log ("Hero Mode : Hair Selected");
-			heroEditor.objectSelected = "Hair";
+			//heroEditor.objectSelected = "Hair";
 			break;
 		case "ColorButton":
 			Debug.Log ("Edit Mode : Color Selected");
-			heroEditor.objectSelected = "Color";
+			//heroEditor.objectSelected = "Color";
 			break;
 		}
 	}

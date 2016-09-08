@@ -78,6 +78,8 @@ public class HeroController : MonoBehaviour {
 		#if UNITY_STANDALONE || UNITY_WEBPLAYER || UNITY_EDITOR || UNITY_HTML5
 
 		horizontalForce = Input.GetAxis("Horizontal");
+		verticalForce = Input.GetAxis("Vertical");
+
 		anim.SetFloat("Speed", Mathf.Abs(horizontalForce));
 
 		if (horizontalForce * rb2d.velocity.x < maxSpeed)
@@ -85,6 +87,14 @@ public class HeroController : MonoBehaviour {
 
 		if (Mathf.Abs (rb2d.velocity.x) > maxSpeed)
 			rb2d.velocity = new Vector2(Mathf.Sign (rb2d.velocity.x) * maxSpeed, rb2d.velocity.y);
+
+		if(verticalForce <= -0.01f) {
+			anim.SetBool("Roll",true);
+			Debug.Log(verticalForce); 
+		}
+		else {
+			anim.SetBool("Roll",false);
+		}
 
 		#else
 
@@ -108,6 +118,9 @@ public class HeroController : MonoBehaviour {
 			jump = false;
 		}
 
+		if (Input.GetButtonDown("Fire1")){
+			anim.SetTrigger("Punch");
+		}
 	}
 
 
