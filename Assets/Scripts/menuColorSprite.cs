@@ -6,8 +6,12 @@ public class menuColorSprite : MonoBehaviour {
 
 	public GameObject HeroObject;
 	public GameObject editorImporter;
+	public GameObject levelImporter;
 
-	public Sprite[] menuColors;
+	public GameObject topMenu;
+
+	public Color[] menuColors;
+	public GameObject categoryLabel;
 	public GameObject[] ObjectToggles;
 	public GameObject undoButton;
 
@@ -20,13 +24,28 @@ public class menuColorSprite : MonoBehaviour {
 
 	public Sprite lockSprite;
 
+	public GameObject gridPattern;
+
 	// Use this for initialization
 	void Start () {
 		CategoryChanged ("groundTGL");
+		drawTheGrid();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+	}
+
+	void drawTheGrid (){
+		for (int x = 0; x < levelCode.current.LevelRows; x++) {
+			for (int y = 0; y < levelCode.current.LevelColumns; y++) {
+				Vector3 gridPosition = new Vector3 ();
+				gridPosition.x = x+0.5f;
+				gridPosition.y = y+0.5f;
+				gridPosition.z = 0;
+				Instantiate (gridPattern, gridPosition, transform.rotation);
+			}
+		}
 	}
 
 	public void CategoryChanged(string categorySelected){
@@ -39,38 +58,45 @@ public class menuColorSprite : MonoBehaviour {
 		MainScript mainScript = (MainScript)HeroObject.GetComponent<MainScript> ();
 
 		int theMenuColor;
+		string categoryText;
 
 		switch (categorySelected) {
 		case "levelTGL":
 			theMenuColor = 0;
-			updateTopMenu (theMenuColor, levelTogglesSprites, mainScript.unlockedLevelObjects);
+			categoryText = "LEVEL"; 
+			updateTopMenu (theMenuColor, categoryText, levelTogglesSprites, mainScript.unlockedLevelObjects);
 			break;
 		case "enemyTGL":
 			theMenuColor = 1;
-			updateTopMenu (theMenuColor, enemyTogglesSprites, mainScript.unlockedEnemyObjects);
+			categoryText = "ENEMIES"; 
+			updateTopMenu (theMenuColor, categoryText, enemyTogglesSprites, mainScript.unlockedEnemyObjects);
 			break;
 		case "collectibleTGL":
 			theMenuColor = 2;
-			updateTopMenu (theMenuColor, collectibleTogglesSprites, mainScript.unlockedCollectibleObjects);
+			categoryText = "OBJECTS"; 
+			updateTopMenu (theMenuColor, categoryText, collectibleTogglesSprites, mainScript.unlockedCollectibleObjects);
 			break;
 		case "trapTGL":
 			theMenuColor = 3;
-			updateTopMenu (theMenuColor, trapTogglesSprites, mainScript.unlockedTrapObjects);
+			categoryText = "TRAPS"; 
+			updateTopMenu (theMenuColor, categoryText, trapTogglesSprites, mainScript.unlockedTrapObjects);
 			break;
 		case "groundTGL":
 			theMenuColor = 4;
-			updateTopMenu (theMenuColor, groundTogglesSprites, mainScript.unlockedGroundObjects);
+			categoryText = "GROUND"; 
+			updateTopMenu (theMenuColor, categoryText, groundTogglesSprites, mainScript.unlockedGroundObjects);
 			break;
 		case "editTGL":
 			theMenuColor = 5;
-			updateTopMenu (theMenuColor, editTogglesSprites, mainScript.unlockedEditObjects);
+			categoryText = "EDIT"; 
+			updateTopMenu (theMenuColor, categoryText, editTogglesSprites, mainScript.unlockedEditObjects);
 			break;
 		}
 	}
 
-	void updateTopMenu(int theMenuColor, Sprite[] selectedToggles, string[] unlockedSelectedObjects) {
-		
-		GetComponent<Image> ().sprite = menuColors [theMenuColor];
+	void updateTopMenu(int theMenuColor, string theText, Sprite[] selectedToggles, string[] unlockedSelectedObjects) {
+		topMenu.GetComponent<Image>().color = menuColors [theMenuColor];
+		categoryLabel.GetComponent<Text> ().text = theText;
 
 		for (int i = 0; i < levelTogglesSprites.Length; i++) {
 			if (selectedToggles [i] != null && unlockedSelectedObjects[i] != null) {

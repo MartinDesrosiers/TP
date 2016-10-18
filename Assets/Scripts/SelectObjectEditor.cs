@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class SelectObjectEditor : MonoBehaviour {
 
 	public GameObject editorImporter;
+	public GameObject cameraImporter;
+
 	private string selectedObject;
 	private string previousSelection;
 
@@ -15,15 +18,22 @@ public class SelectObjectEditor : MonoBehaviour {
 		}
 
 		Debug.Log ("Edit Mode : "+selectedObject+" was clicked.");
-		LevelEditor levelEditor = editorImporter.GetComponent<LevelEditor> ();
 
-		levelEditor.objectSelected = selectedObject;
-
+		if (selectedObject == "Cursor") {
+		
+		} else {
+			LevelEditor levelEditor = editorImporter.GetComponent<LevelEditor> ();
+			levelEditor.objectSelected = selectedObject;
+		}
 		previousSelection = selectedObject;
 	}
 
 	public void undoClick() {
 		LevelEditor levelEditor = editorImporter.GetComponent<LevelEditor> ();
-		levelEditor.UndoLevelChanges ();
+		levelEditor.undoChanges ();
+	}
+
+	public void destroyClick() {
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
 }

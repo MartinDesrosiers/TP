@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class tileConnector : MonoBehaviour {
 
-	public GameObject EditorImporter;
+	public GameObject levelImporter;
 
 	public bool isConnectable(string objectType) {
 		switch (objectType) {
@@ -563,8 +563,8 @@ public class tileConnector : MonoBehaviour {
 				surroundingTiles = detectSurroundingTiles(objectType,thisRow,thisColumn, levelArray);
 				//int resultObject = selectTileSprite();
 				//Debug.Log("Correct tile is :"+resultObject);
-				LevelEditor levelEditor = EditorImporter.GetComponent<LevelEditor> ();
-				levelEditor.instantiateObject (objectType, thisRow, thisColumn, surroundingTiles);
+				levelVisual LevelVisual = levelImporter.GetComponent<levelVisual> ();
+				LevelVisual.instantiateObject (objectType, thisRow, thisColumn, surroundingTiles);
 			}
 		}
 	}
