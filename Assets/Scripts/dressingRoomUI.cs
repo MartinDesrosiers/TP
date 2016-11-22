@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class dressingRoomUI : MonoBehaviour {
+public class DressingRoomUI : MonoBehaviour {
 
 	public GameObject heroImporter;
 	public GameObject bottomMenu;
@@ -16,7 +16,7 @@ public class dressingRoomUI : MonoBehaviour {
 	public GameObject buyBTN;
 
 	public GameObject money;
-	public GameObject name;
+	public GameObject heroName;
 	public GameObject level;
 
 	public GameObject[] health;
@@ -38,7 +38,7 @@ public class dressingRoomUI : MonoBehaviour {
 	void Start () {
 		ethiquette.SetActive (false);
 		buyBTN.SetActive (false);
-		CategoryChanged("hatTGL");
+		CategoryChanged("Hats");
 	}
 	
 	// Update is called once per frame
@@ -46,53 +46,61 @@ public class dressingRoomUI : MonoBehaviour {
 	
 	}
 
+	//Function called when clicking on a buttons that changes category.
+	//Onclick, returns a string assigned in inspector
 	public void CategoryChanged(string categorySelected){
 
 		MainScript mainScript = (MainScript)heroImporter.GetComponent<MainScript> ();
-
 		int theMenuColor;
 
+		//Check which is the new category and calls the update
 		switch (categorySelected) {
-		case "hatTGL":
+		case "Hats":
 			theMenuColor = 0;
-			updateTopMenu (theMenuColor, hatObjects, mainScript.unlockedLevelObjects);
+			updateBottomMenu (categorySelected,theMenuColor, hatObjects, mainScript.unlockedLevelObjects);
 			break;
-		case "shirtTGL":
+		case "Shirts":
 			theMenuColor = 1;
-			updateTopMenu (theMenuColor, shirtObjects, mainScript.unlockedEnemyObjects);
+			updateBottomMenu (categorySelected,theMenuColor, shirtObjects, mainScript.unlockedEnemyObjects);
 			break;
-		case "pantsTGL":
+		case "Pants":
 			theMenuColor = 2;
-			updateTopMenu (theMenuColor, pantsObjects, mainScript.unlockedCollectibleObjects);
+			updateBottomMenu (categorySelected,theMenuColor, pantsObjects, mainScript.unlockedCollectibleObjects);
 			break;
-		case "shoesTGL":
+		case "Shoes":
 			theMenuColor = 3;
-			updateTopMenu (theMenuColor, shoesObjects, mainScript.unlockedTrapObjects);
+			updateBottomMenu (categorySelected,theMenuColor, shoesObjects, mainScript.unlockedTrapObjects);
 			break;
-		case "weaponsTGL":
+		case "Weapons":
 			theMenuColor = 4;
-			updateTopMenu (theMenuColor, weaponObjects, mainScript.unlockedGroundObjects);
+			updateBottomMenu (categorySelected,theMenuColor, weaponObjects, mainScript.unlockedGroundObjects);
 			break;
-		case "runnerTGL":
+		case "Runner":
 			theMenuColor = 5;
-			updateTopMenu (theMenuColor, characterObjects, mainScript.unlockedEditObjects);
+			updateBottomMenu (categorySelected,theMenuColor, characterObjects, mainScript.unlockedEditObjects);
 			break;
 		}
 	}
 
-	void updateTopMenu(int theMenuColor, GameObject[] selectedToggles, string[] unlockedSelectedObjects) {
+	void updateBottomMenu(string categorySelected, int theMenuColor, GameObject[] selectedToggles, string[] unlockedSelectedObjects) {
+
+		//Update the bottom menu colors
 		bottomMenu.GetComponent<Image>().color = menuColors [theMenuColor];
+		//Update the category button colors and text
+		categoryBTN.GetComponent<Image> ().color = menuColors [theMenuColor];
+		categoryBTN.transform.Find("Text").GetComponent<Text>().text = categorySelected;
 
+		//For each object toggles of the bottom menu, show the attributed object and money, if unlocked.
 		for (int i = 0; i < ObjectToggles.Length; i++) {
-			if (selectedToggles [i] != null && unlockedSelectedObjects[i] != null) {
-
+			if (selectedToggles [i] != null && unlockedSelectedObjects[i] != null) { //If the object exists and is unlocked
+				//Get the sprite of the objects
 				Sprite selectedSprite = selectedToggles [i].GetComponent<SpriteRenderer> ().sprite;
-
+				//Assign it to the toggles, with name and money.
 				ObjectToggles [i].transform.Find ("Image").GetComponent<Image> ().sprite = selectedSprite;
 				ObjectToggles[i].name = unlockedSelectedObjects[i];
 				ObjectToggles [i].GetComponent<Toggle>().interactable = true;
 				Debug.Log ("There is an object at toogle : "+i);
-			} else {
+			} else { //Locked objects
 				ObjectToggles [i].transform.Find ("Image").GetComponent<Image> ().sprite = lockSprite;
 				ObjectToggles [i].transform.Find ("Label").GetComponent<Text> ().text = ""; 
 				ObjectToggles [i].GetComponent<Toggle>().interactable = false;

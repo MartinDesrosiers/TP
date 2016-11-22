@@ -22,14 +22,14 @@ public class SelectObjectEditor : MonoBehaviour {
 		if (selectedObject == "Cursor") {
 		
 		} else {
-			LevelEditor levelEditor = editorImporter.GetComponent<LevelEditor> ();
+			LevelEditorController levelEditor = editorImporter.GetComponent<LevelEditorController> ();
 			levelEditor.objectSelected = selectedObject;
 		}
 		previousSelection = selectedObject;
 	}
 
 	public void undoClick() {
-		LevelEditor levelEditor = editorImporter.GetComponent<LevelEditor> ();
+		LevelEditorController levelEditor = editorImporter.GetComponent<LevelEditorController> ();
 		levelEditor.undoChanges ();
 	}
 

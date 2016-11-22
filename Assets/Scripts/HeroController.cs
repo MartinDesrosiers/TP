@@ -4,23 +4,34 @@ using UnityEngine.SceneManagement;
 
 public class HeroController : MonoBehaviour {
 
+	//The left/right direction the character is facing
 	[HideInInspector] public bool facingRight;
-	[HideInInspector] public bool jump = false;
+
+	//Acceleration of the character
 	public float moveForce = 365f;
+	//Max speed
 	public float maxSpeed = 5f;
+	//Jump force
 	public float jumpForce = 1000f;
-	public Transform groundCheck;
-	public Transform wallCheck;
+
+	//Move direction left/right, bottom/top
 	private float horizontalForce =0;
 	private float verticalForce = 0;
 
+	//Can we control the character? Used in level editor when editing level
 	public bool playable = true;
 
+	//Checks if the character jumps
+	[HideInInspector] public bool jump = false;
+
+	//Check with hidden transforms if the character is touching the ground or the wall
+	public Transform groundCheck;
 	private bool grounded = false;
+	public Transform wallCheck;
 	private bool walled = false;
+
 	public Animator anim;
 	private Rigidbody2D rb2d;
-
 
 	//Mobile controls
 	private Vector2 touchOrigin = -Vector2.one;
@@ -35,14 +46,16 @@ public class HeroController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+		//If not editing in level editor, the character can be controlled
 		if (playable) {
+			//Checks if the characters hidden transforms are touching ground objects -> Differentiate wall from grounds
 			grounded = Physics2D.Linecast (transform.position, groundCheck.position, 1 << LayerMask.NameToLayer ("Ground"));
 			walled = Physics2D.Linecast (transform.position, wallCheck.position, 1 << LayerMask.NameToLayer ("Ground"));
 
+			//If test version
 			#if UNITY_STANDALONE || UNITY_WEBPLAYER || UNITY_EDITOR
 
 			if (Input.GetButtonDown ("Jump") && grounded) {
-				//Debug.Log("Jump");
 				jump = true;
 			}
 
@@ -50,6 +63,7 @@ public class HeroController : MonoBehaviour {
 				jump = true;
 			}
 
+			//If Mobile version
 			#else
 
 		if (Input.touchCount > 0) {
@@ -156,6 +170,7 @@ public class HeroController : MonoBehaviour {
 		transform.localScale = theScale;
 	}
 
+	//Under construction
 	public void isDead() {
 		//Debug.Log ("He is dead");
 		this.transform.position = new Vector3(3f,4.1f,0);
@@ -163,6 +178,7 @@ public class HeroController : MonoBehaviour {
 		//HeroController.Respawn();
 	}
 
+	//Under construction
 	public void levelCompleted() {
 		this.transform.position = new Vector3(3f,4.1f,0);
 		horizontalForce = 0f;

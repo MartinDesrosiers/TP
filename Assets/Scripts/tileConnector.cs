@@ -2,21 +2,18 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class tileConnector : MonoBehaviour {
+public class TileConnector : MonoBehaviour {
 
 	public GameObject levelImporter;
 
 	public bool isConnectable(string objectType) {
 		switch (objectType) {
-		case ("Tile"):
+		case ("Tile"): 
 			return true;
-			break;
 		case ("Coin"):
 			return false;
-			break;
 		default :
 			return false;
-			break;
 		}
 	}
 
@@ -563,7 +560,7 @@ public class tileConnector : MonoBehaviour {
 				surroundingTiles = detectSurroundingTiles(objectType,thisRow,thisColumn, levelArray);
 				//int resultObject = selectTileSprite();
 				//Debug.Log("Correct tile is :"+resultObject);
-				levelVisual LevelVisual = levelImporter.GetComponent<levelVisual> ();
+				LevelVisual LevelVisual = levelImporter.GetComponent<LevelVisual> ();
 				LevelVisual.instantiateObject (objectType, thisRow, thisColumn, surroundingTiles);
 			}
 		}

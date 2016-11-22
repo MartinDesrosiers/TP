@@ -5,18 +5,8 @@ public class SelectCategoryToggle : MonoBehaviour {
 
 	public GameObject menuImporter;
 
-	// Use this for initialization
-	void Start () {
-
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
 	public void OnClick(){
-		menuColorSprite topMenu = menuImporter.GetComponent<menuColorSprite> ();
+		LevelEditorUI topMenu = menuImporter.GetComponent<LevelEditorUI> ();
 		topMenu.CategoryChanged(this.gameObject.name);
 	}
 }

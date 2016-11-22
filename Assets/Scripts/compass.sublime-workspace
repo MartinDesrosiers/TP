@@ -1,0 +1,590 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Action",
+				"Action<T1>	class"
+			],
+			[
+				"Syste",
+				"System"
+			],
+			[
+				"Debu",
+				"Debug"
+			],
+			[
+				"count",
+				"counter"
+			],
+			[
+				"post",
+				"postsID"
+			],
+			[
+				"pos",
+				"postCount"
+			],
+			[
+				"For",
+				"foreach"
+			],
+			[
+				"st",
+				"style"
+			],
+			[
+				"chart",
+				"chart-widget"
+			],
+			[
+				"se",
+				"secondaryColor"
+			],
+			[
+				"rand",
+				"randomValue2"
+			],
+			[
+				"random",
+				"randomValue"
+			],
+			[
+				"custom",
+				"customID"
+			],
+			[
+				"ance",
+				"ancestors"
+			],
+			[
+				"parent",
+				"ParentDepth"
+			],
+			[
+				"Sta",
+				"statistiques"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"toda",
+				"today_day"
+			],
+			[
+				"to",
+				"today_month"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"nav",
+				"navbar"
+			],
+			[
+				"bg",
+				"background-color"
+			],
+			[
+				"he",
+				"header	Tag"
+			],
+			[
+				"paddin",
+				"padding-left"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"bor",
+				"border-top"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"bar",
+				"background"
+			],
+			[
+				"marin",
+				"margin-top"
+			],
+			[
+				"tex",
+				"text-transform"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"n",
+				"nav	Tag"
+			],
+			[
+				"fron",
+				"front-page-header"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"PAc",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"Pac",
+				"Package Control: List Packages"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"Pack",
+				"Package Control: Install Package"
+			],
+			[
+				"Packa",
+				"Package Control: Install Package"
+			],
+			[
+				"con",
+				"Package Control: Install Package"
+			],
+			[
+				"Con",
+				"Package Control: Install Package"
+			],
+			[
+				"Control",
+				"Package Control: Install Package"
+			],
+			[
+				"Package COntrol",
+				"Package Control: Install Package"
+			],
+			[
+				"Package control",
+				"Package Control: Add Repository"
+			],
+			[
+				"Contr",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 1044.0
+	},
+	"console":
+	{
+		"height": 118.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Martin/Documents/Toprunners/Toprunners/(File)",
+		"/C/Users/Martin/Documents/Toprunners/Toprunners/0",
+		"/C/Users/Martin/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/C/wamp/www/Compass/wordpress/wp-content/themes/Compass/templates/header.php",
+		"/C/Users/Martin/Downloads/Database/populate.py",
+		"/C/Users/Martin/Downloads/Database/create.sql",
+		"/C/wamp/www/Compass/wordpress/wp-content/themes/Compass/page-gestion-des-utilisateurs.php",
+		"/C/wamp/www/Compass/wordpress/wp-content/themes/Compass/lib/setup.php",
+		"/C/wamp/www/Compass/wordpress/wp-content/themes/Compass/functions.php",
+		"/C/wamp/www/Compass/wordpress/wp-content/themes/Compass/front-page.php",
+		"/C/wamp/www/Compass/wordpress/wp-content/themes/Compass/farm-template.php",
+		"/C/wamp/www/Compass/wordpress/wp-content/themes/Compass/page-parametres.php",
+		"/C/wamp/www/Compass/wordpress/wp-content/themes/Compass/assets/styles/layouts/_pages.scss",
+		"/C/Users/Martin/Documents/Intelia/SVGICONS/fontello-d7451fb7/demo.html",
+		"/C/wamp/www/Compass/wordpress/wp-content/themes/Compass/index.php",
+		"/C/wamp/www/Compass/wordpress/wp-content/themes/Compass/page.php",
+		"/C/wamp/www/Compass/wordpress/wp-content/themes/Compass/page-gestion-des-donnees.php",
+		"/C/wamp/www/Compass/wordpress/wp-content/themes/Compass/editPage.php",
+		"/C/wamp/www/Compass/wordpress/wp-content/themes/Compass/page-edit-entity.php",
+		"/C/wamp/www/Compass/wordpress/wp-content/themes/Compass/front-page - Copy.php",
+		"/C/wamp/www/Compass/wordpress/wp-content/themes/Compass/assets/styles/layouts/_footer.scss",
+		"/C/wamp/www/Compass/wordpress/wp-content/themes/Compass/assets/styles/layouts/_header.scss",
+		"/C/wamp/www/Compass/wordpress/wp-content/themes/Compass/assets/styles/common/_variables.scss",
+		"/C/wamp/www/Compass/wordpress/wp-content/themes/Compass/assets/styles/common/_global.scss",
+		"/C/wamp/www/Compass/wordpress/wp-content/themes/Compass/templates/head.php",
+		"/C/wamp/www/Compass/wordpress/wp-content/themes/Compass/templates/footer.php",
+		"/C/wamp/www/Compass/wordpress/wp-content/themes/Compass/lib/bs4navwalker.php",
+		"/C/wamp/www/Compass/wordpress/wp-content/themes/Compass/bower_components/bootstrap/scss/_media.scss",
+		"/C/wamp/www/Compass/wordpress/wp-content/themes/Compass/bower_components/bootstrap/scss/_mixins.scss",
+		"/C/wamp/www/Compass/wordpress/wp-admin/includes/file.php",
+		"/C/wamp/www/Compass/wordpress/wp-content/themes/Compass/lib/wp_bootstrap_navwalker.php",
+		"/C/wamp/www/Compass/wordpress/wp-settings.php",
+		"/C/wamp/www/Compass/wordpress/wp-config.php",
+		"/C/wamp/www/Compass/wordpress/wp-load.php",
+		"/C/wamp/www/Compass/wordpress/wp-blog-header.php",
+		"/C/wamp/www/Compass/wordpress/wp-content/themes/CompassTheme/style.css",
+		"/C/wamp/www/Compass/wordpress/wp-content/themes/Compass/style.css",
+		"/C/wamp/www/rodeocreatif/wp-content/themes/rodeocreatif/templates/header.php",
+		"/C/wamp/www/Compass/wordpress/wp-content/themes/CompassSage/style.css",
+		"/C/wamp/www/Compass/wordpress/wp-config-sample.php",
+		"/C/Users/Martin/Documents/GitHub/The-Oldest-Game/The-Oldest-Game/TheOldestGame/Assets/Scenes/vancouver.unity",
+		"/C/Users/Martin/Documents/GitHub/The-Oldest-Game/The-Oldest-Game/TheOldestGame/Assets/Scenes/vancouverFixed.unity",
+		"/C/Users/Martin/AppData/Local/Temp/00276d8f-0664-42ed-8e0c-3b7dce5e335b/public_html/portfolio/game_design.html",
+		"/C/Users/Martin/Documents/GitHub/The-Oldest-Game/TheOldestGame/Build/index.php",
+		"/C/Users/Martin/Downloads/Toronto_Scenarios_Eileen_0424_v2.docx",
+		"/C/Users/Martin/Documents/OldestGame/OldestGame23/DownTimeVAN.xml",
+		"/C/Users/Martin/Documents/OldestGame/OldestGame23/DownTimeTOR.xml",
+		"/C/Users/Martin/Documents/OldestGame/OldestGame23/DownTimeMTL.xml",
+		"/C/Users/Martin/Documents/OldestGame/OldestGame23/ClientsVAN.xml",
+		"/C/Users/Martin/Documents/OldestGame/OldestGame23/ClientsTOR.xml",
+		"/C/Users/Martin/Documents/OldestGame/OldestGame23/ClientsMTL.xml",
+		"/C/Users/Martin/Documents/OldestGame/OldestGame_ACFAS_BETA/OldestGame21/ClientsMTL.xml",
+		"/C/Users/Martin/Documents/OldestGame/OldestGame_ACFAS_BETA/OldestGame21/ClientsTOR.xml",
+		"/C/Users/Martin/Documents/OldestGame/OldestGame_ACFAS_BETA/OldestGame21/ClientsVAN.xml",
+		"/C/Users/Martin/Documents/OldestGame/OldestGame_ACFAS_BETA/OldestGame21/DownTimeMTL.xml",
+		"/C/Users/Martin/Documents/OldestGame/OldestGame_ACFAS_BETA/OldestGame21/DownTimeTOR.xml",
+		"/C/Users/Martin/Documents/OldestGame/OldestGame_ACFAS_BETA/OldestGame21/DownTimeVAN.xml",
+		"/C/Users/Martin/Downloads/OldestGame21/DownTimeVAN.xml",
+		"/C/Users/Martin/Downloads/OldestGame21/ClientsTOR.xml",
+		"/C/Users/Martin/Downloads/OldestGame21/DownTimeTOR.xml",
+		"/C/Users/Martin/Documents/OldestGame/OldestGame21/DownTimeTOR.xml",
+		"/C/wamp/www/portfolio/scripts/mouse-over.js",
+		"/C/wamp/www/portfolio/styles/small.css",
+		"/C/wamp/www/portfolio/styles/medium.css",
+		"/C/wamp/www/portfolio/styles/large.css",
+		"/C/wamp/www/portfolio/styles/global.css",
+		"/C/wamp/www/portfolio/styles/fonts.css",
+		"/C/wamp/www/portfolio/game_design.html",
+		"/C/wamp/www/portfolio/3d_graphics.html",
+		"/C/wamp/www/portfolio/web_design.html",
+		"/C/wamp/www/portfolio/installations.html",
+		"/C/wamp/www/portfolio/infographics.html",
+		"/C/wamp/www/portfolio/mobile-menu.html",
+		"/C/wamp/www/portfolio/index.html",
+		"/C/wamp/www/portfolio/TheOldestGame.html",
+		"/C/wamp/www/portfolioBackup/game_design.php",
+		"/C/wamp/www/portfolioBackup/3d_graphics.php",
+		"/C/wamp/www/portfolioBackup/web_design.php",
+		"/C/wamp/www/portfolioBackup/installations.php",
+		"/C/wamp/www/portfolioBackup/infographics.php",
+		"/C/wamp/www/portfolio/fonts.css",
+		"/C/wamp/www/portfolio/global.css",
+		"/C/wamp/www/portfolio/mouse-over.js",
+		"/C/wamp/www/portfolio/largeDesign.css",
+		"/C/wamp/www/portfolio/smallDesign.css",
+		"/C/wamp/www/portfolio/mediumDesign.css",
+		"/C/wamp/www/portfolio/fonts/stylesheet.css",
+		"/C/wamp/www/rodeocreatif/wp-content/themes/rodeocreatif/taxonomy-type.php",
+		"/C/wamp/www/rodeocreatif/wp-content/themes/rodeocreatif/archive.php",
+		"/C/wamp/www/rodeocreatif/wp-content/themes/rodeocreatif/dist/styles/header.php",
+		"/C/Users/Martin/Desktop/3d_graphics.html",
+		"/C/Users/Martin/Documents/index.html",
+		"/C/Users/Martin/Desktop/index.html",
+		"/C/wamp/www/rodeocreatif/wp-content/themes/rodeocreatif/assets/styles/layouts/_pages.scss",
+		"/C/wamp/www/rodeocreatif/wp-content/themes/rodeocreatif/templates/content-portfolio.php",
+		"/C/wamp/www/rodeocreatif/wp-content/themes/rodeocreatif/front-page.php",
+		"/C/wamp/www/rodeocreatif/wp-content/themes/rodeocreatif/assets/styles/layouts/_header.scss",
+		"/C/wamp/www/rodeocreatif/wp-content/themes/rodeocreatif/assets/styles/layouts/_footer.scss",
+		"/C/wamp/www/rodeocreatif/wp-content/themes/rodeocreatif/templates/footer.php",
+		"/C/wamp/www/rodeocreatif/wp-content/themes/rodeocreatif/assets/styles/common/_variables.scss",
+		"/C/wamp/www/rodeocreatif/wp-content/themes/rodeocreatif/assets/styles/common/_fonts.scss",
+		"/C/wamp/www/rodeocreatif/wp-content/themes/rodeocreatif/functions.php",
+		"/C/wamp/www/rodeocreatif/wp-content/themes/rodeocreatif/assets/styles/common/_global-test.scss",
+		"/C/wamp/www/rodeocreatif/wp-content/themes/rodeocreatif/category.php",
+		"/C/wamp/www/rodeocreatif/wp-content/themes/rodeocreatif/page.php",
+		"/C/wamp/www/rodeocreatif/wp-content/themes/rodeocreatif/index.php",
+		"/C/wamp/www/rodeocreatif/wp-content/themes/rodeocreatif/lib/init.php",
+		"/C/wamp/www/rodeocreatif/wp-content/themes/rodeocreatif/assets/styles/layouts/_pages-test.scss",
+		"/C/wamp/www/rodeocreatif/wp-content/themes/rodeocreatif/templates/content-portfolio-test.php",
+		"/C/wamp/www/rodeocreatif/wp-content/themes/rodeocreatif/lib/custom.php",
+		"/C/wamp/www/rodeocreatif/wp-content/themes/rodeocreatif/assets/styles/common/_global.scss",
+		"/C/wamp/www/rodeocreatif/wp-content/themes/rodeocreatif/taxonomy.php",
+		"/C/Users/Martin/Downloads/arcade-basic/style.css",
+		"/C/Users/Martin/Downloads/arcade-basic/library/js/theme.js",
+		"/C/Users/Martin/Downloads/arcade-basic/library/js/fillsize.js",
+		"/C/Users/Martin/Downloads/arcade-basic/header.php",
+		"/C/Users/Martin/Downloads/arcade-basic/functions.php",
+		"/C/wamp/www/ESSJ2/wp-content/themes/St-Joseph_responsive/category.php",
+		"/C/wamp/www/ESSJ2/wp-content/themes/St-Joseph_responsive/archive.php",
+		"/C/wamp/www/ESSJ2/wp-content/themes/St-Joseph_responsive/page.php",
+		"/C/Users/Martin/Downloads/Nouveau dossier/stylesheet.css",
+		"/C/wamp/www/rodeocreatif/wp-content/themes/rodeocreatif/dist/styles/main.css",
+		"/C/wamp/www/rodeocreatif/wp-content/themes/rodeocreatif/single-portfolio.php",
+		"/C/wamp/www/rodeocreatif/wp-content/themes/rodeocreatif/assets/styles/main.scss",
+		"/C/wamp/www/ESSJ2/wp-content/themes/St-Joseph_responsive/assets/styles/common/_fonts.scss",
+		"/C/Users/Martin/Downloads/arcade-basic/page-templates/template-post-block.php",
+		"/C/Users/Martin/Downloads/arcade-basic/content-header.php",
+		"/C/Users/Martin/Downloads/arcade-basic/footer.php"
+	],
+	"find":
+	{
+		"height": 48.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"C:\\Users\\Martin\\Documents\\OldestGame\\OldestGame23",
+			"C:\\wamp\\www\\rodeocreatif\\wp-content\\themes\\rodeocreatif"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"'cap",
+			"$parentsID",
+			"400",
+			"bold",
+			"<",
+			"active",
+			"nav-item ",
+			"div",
+			"padding-top",
+			"compass",
+			"1552870934",
+			"I need you to wait in a hotel room for me, blindfolded. I'll wire you, half in advance, if you agree, but you can't know who I am.",
+			"paper",
+			"Bad Date",
+			"bad date",
+			"flag",
+			"							\n",
+			">\n",
+			"al",
+			">\n",
+			"I'm so bored. And you're gonna need something to keep yourself awake for the rest of your shift.",
+			"You wouldn't even recognize me if you saw me out on the street without being in straight-girl drag.",
+			"Plus, he doesn't tip and a couple times he didn't even have enough money to pay me after",
+			"Join a VIP Escort Website that targets high-end clients for $70/month.",
+			"Choose how you want to advertise your services.",
+			"driver>",
+			"take",
+			">\n",
+			"co",
+			"cop",
+			">\n",
+			"noah",
+			"Escape",
+			"escape",
+			"Police",
+			"police",
+			"report",
+			"Report",
+			"obey",
+			"citation",
+			"Report",
+			"hotel",
+			"hefty",
+			"<hotel",
+			"<sex",
+			"<sex>",
+			"Serve",
+			"will",
+			"175",
+			"condoms",
+			"a.",
+			"a",
+			"call the cops",
+			"What are you goign to do, call the cops",
+			"anti",
+			"cream",
+			"50 to 60",
+			"<Escape>",
+			"Escape",
+			"Claude",
+			"sheila",
+			"Police",
+			"Friend2",
+			"<Friend7>",
+			"<Friend>",
+			"Friend>",
+			"No thanks, I'm busy",
+			"Vancouver",
+			"800",
+			"Stay",
+			"It’s time to do your taxes! Keeping on top of your taxes is important when you’re a sex worker and there are many benefits, such as RRSP investments, GST rebates, rent credits, claims on your dependents, and more. Unfortunately, it is likely that you will not usually receive a tax refund because you don’t pay for deductions to Income Tax, CPP, or EI. This year you owe $800. ",
+			"Hang Up",
+			"aaron",
+			"$600",
+			"Next",
+			"<Will",
+			"Will",
+			"car",
+			"dangerous",
+			"actual",
+			"Douglas",
+			"baby",
+			"while",
+			"52",
+			"ser",
+			"rest",
+			"...",
+			"Company",
+			"moist",
+			"moisturizer",
+			"moisturizer ",
+			"The Know Your Rights Card",
+			"Blake",
+			"advice",
+			"dangerous",
+			"rest",
+			"Al",
+			"In Vancouver",
+			"in Vancouver",
+			"company",
+			"compagny",
+			"extra",
+			"Vancouver",
+			"In Vancouver",
+			"In vancouver",
+			"extra",
+			"rash",
+			"moisturizer",
+			"<?",
+			"moisturizer",
+			"<?",
+			"moisturizer",
+			"Just",
+			"basic",
+			"car",
+			"<Start",
+			"CorrineAgency",
+			"Corrine",
+			"money",
+			"<money>",
+			"<money>-50",
+			"<money>-50</mood>",
+			"<hotel>",
+			"hotel>",
+			"hotel",
+			"sound>1",
+			"screenni",
+			"Dany"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"LilyAgency",
+			"('../fonts",
+			"('fonts/lato",
+			"'fonts/lato"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 94.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 244.0,
+	"status_bar_visible": true
+}

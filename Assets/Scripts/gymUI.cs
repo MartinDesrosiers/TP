@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
-public class gymUI : MonoBehaviour {
+public class GymUI : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -17,10 +18,10 @@ public class gymUI : MonoBehaviour {
 	
 		switch (objectClicked) {
 		case "back":
-			Application.LoadLevel ("mainMenu");
+			SceneManager.LoadScene ("MainMenu");
 			break;
 		case "dressing":
-			Application.LoadLevel ("dressingRoom");
+			SceneManager.LoadScene ("DressingRoom");
 			break;
 		}
 	}
